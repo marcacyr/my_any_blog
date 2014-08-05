@@ -1,5 +1,5 @@
 var express = require('express');
-var moment = require('moment');
+var moment = require('cloud/moment.min.js');
 var _ = require('underscore');
 var md5 = require('cloud/libs/md5.js');
 
@@ -12,12 +12,12 @@ var adminController = require('cloud/controllers/admin.js');
 var app = express();
 
 // We will use HTTP basic auth to protect some routes (e.g. adding a new blog post)
-var basicAuth = express.basicAuth('YOUR_USERNAME','YOUR_PASSWORD');
+var basicAuth = express.basicAuth('marcacyr','kristina');
 
 // The information showed about the poster
-var userEmail = 'YOUR_EMAIL';
-var userDisplayName = 'YOUR_DISPLAY_NAME';
-var userDescription = 'YOUR_DESCRIPTION';
+var userEmail = 'marcacyr@gmail.com';
+var userDisplayName = 'Marc Cyr';
+var userDescription = 'Software Engineer';
 
 // Instead of using basicAuth, you can also implement your own cookie-based
 // user session management using the express.cookieSession middleware
